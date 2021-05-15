@@ -1,0 +1,41 @@
+{% extends 'htmlpages/base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Quotes</title>
+    <style>
+        #container{
+            width:100%;height:auto;background-color:ghostwhite;
+        }
+        #div{float:right;margin-right: 20px;font-family: Algerian  }
+
+    </style>
+</head>
+<body>
+<div style="background-color:orange;width:100%;height:8px;"></div>
+<br><br>
+<center>
+{% for y in quotes %}
+<div id="container">
+
+
+    <br><br>
+    <div style="margin:5px;font-family: Bahnschrift;">
+<h6 >"{{ y.quotes }} "</h6>
+   </div><br>
+    <div id="div">~ {{ y.username }} </div>
+    <br>
+    <a href="{% url 'Delete_Post' id=y.id %}">
+       <button type="button" class="btn btn-danger" style="float:left;margin-left:20px;">DELETE</button>
+    </a>
+
+    <br>
+<br>
+</div><br><br>
+{% endfor %}
+</center>
+</body>
+</html>
+{% endblock %}

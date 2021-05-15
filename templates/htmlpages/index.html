@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+     <link href="{% static 'index.css' %}" rel="stylesheet">
+    <title>ALL QUOTES</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+ <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fddbeae0ebbe0001127a668&product=sticky-share-buttons" async="async"></script>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #333;
+  height: 50vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed{
+	background: mediumaquamarine;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+        #container{
+            width:100%;height:auto;background-color:ghostwhite;box-shadow: 0px 0px 2px 2px lightgrey;
+        }
+        #div{float:right;margin-right: 20px;font-family: Algerian  }
+       #a{color:#807b6e;}
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href=""><svg width="1em" height="1em" viewBox="0 0 16 16" style="color:darkgoldenrod;" class="bi bi-chat-square-quote-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.5a1 1 0 0 0-.8.4l-1.9 2.533a1 1 0 0 1-1.6 0L5.3 12.4a1 1 0 0 0-.8-.4H2a2 2 0 0 1-2-2V2zm7.194 2.766c.087.124.163.26.227.401.428.948.393 2.377-.942 3.706a.446.446 0 0 1-.612.01.405.405 0 0 1-.011-.59c.419-.416.672-.831.809-1.22-.269.165-.588.26-.93.26C4.775 7.333 4 6.587 4 5.667 4 4.747 4.776 4 5.734 4c.271 0 .528.06.756.166l.008.004c.169.07.327.182.469.324.085.083.161.174.227.272zM11 7.073c-.269.165-.588.26-.93.26-.958 0-1.735-.746-1.735-1.666 0-.92.777-1.667 1.734-1.667.271 0 .528.06.756.166l.008.004c.17.07.327.182.469.324.085.083.161.174.227.272.087.124.164.26.228.401.428.948.392 2.377-.942 3.706a.446.446 0 0 1-.613.01.405.405 0 0 1-.011-.59c.42-.416.672-.831.81-1.22z"/>
+</svg> Quotes_Aera</a>
+
+<a href="login" style="color:darkgoldenrod;"><h6> <i class="fas fa-user"></i> Login / Register</h6></a>
+ </div>
+</nav>
+
+<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel" >
+  <div class="carousel-inner" >
+    <div class="carousel-item active" data-interval="10000">
+      <img src="https://images.yourstory.com/cs/4/7951d870deb311e98c337d64c472c4c1/1-1584694227014.png?fm=png&auto=format" class="d-block w-100 " alt="..." style="height:400px;">
+    </div>
+    <div class="carousel-item" data-interval="2000">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRm8ln-n51x9JN4H8OG_qwJJ40q8PSt4AQe2A&usqp=CAU" class="d-block w-100" alt="..." style="height:400px;">
+    </div>
+    <div class="carousel-item">
+      <img src="data:image/jpeg;base64,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" class="d-block w-100" alt="..." style="height:400px;">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+<br><br>
+<div style="background-color:orange;width:100%;height:8px;"></div>
+<br><br>
+<center>
+{% for y in data %}
+<div id="container">
+
+
+    <br><br>
+    <div style="margin:5px;font-family: Bahnschrift;">
+      <span> "  {{ y.quotes }}  " </span>
+   </div><br>
+    <div id="div">~ {{ y.username }} </div>
+    <br>
+
+
+
+</div>
+    <br><br><br><br>
+      {% endfor %}
+     </div>
+
+</center>
+
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3 style="font-size:30px;font-style:obliqe;">Quote_Aera<span></span></h3>
+
+				<p class="footer-links">
+					<a href="index.php" class="link-1">Home</a>
+
+					<a href="#">Blog</a>
+
+
+
+					<a href="aboutus.php">About</a>
+
+
+
+					<a href="contactus.php">Contact</a>
+				</p>
+
+				<a href="adminlogin.php"><p class="footer-company-name">Quote_Aera.com © 2020</p></a>
+					</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p>GopalPura Maxi Road Ujjain </p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>09589957396 / 9589957396</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">anivesh.nishad76@gmail.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Quotes_Aeara is for entertainment and showing your hidden telent and express your ability in writting.  	</p>
+
+				<div class="footer-icons">
+<script>
+function openwindow1(){
+wnidowObjectReference=window.open("https://www.facebook.com/anivesh.nishad/about",self);
+}
+</script>
+					<a onclick="openwindow1()">	<i class="fab fa-facebook"></i></i></a>
+					<script>
+function openwindow(){
+wnidowObjectReference=window.open("https://www.instagram.com/black_panther._r/?hl=en",self);
+}
+</script>
+					<a onclick="openwindow()"><i class="fab fa-instagram"></i></i></a>
+					<script>
+function openwindow3(){
+wnidowObjectReference=window.open("https://twitter.com/AniveshNishad",self);
+}
+</script>
+					<a onclick="openwindow3()"><i class="fab fa-twitter"></i></i></a>
+
+					<a href=""><i class="fab fa-google-plus-square"></i></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+		 <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

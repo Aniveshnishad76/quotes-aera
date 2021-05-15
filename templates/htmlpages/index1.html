@@ -1,0 +1,231 @@
+{% extends 'htmlpages/base.html' %}
+
+
+{% block content %}
+
+    <html>
+    <head>
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+        <script>
+         $(document).ready(function(){
+             $("#bi").css();
+
+         })
+     </script>
+
+         <style>
+             #nav-tab{color:black;font-size:14px; font-family: Algerian;background-color:mediumaquamarine}
+             #span{margin:5px;font-family: Bahnschrift;}
+        #container{
+            width:100%;height:auto;background-color:ghostwhite;box-shadow: 0px 0px 2px 2px lightgrey;
+        }
+        #div{float:right;margin-right: 20px;font-family: Algerian  }
+
+    </style>
+
+    </head>
+    <body>
+       <div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" style="left:0px; top:150px;">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_whatsapp"></a>
+    <a class="a2a_button_facebook_messenger"></a>
+
+</div>
+<center>
+ <div style="background-color:orange;width:100%;height:8px;"></div>
+<nav >
+  <div class="nav nav-tabs" id="nav-tab" role="tablist" >
+    <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true" style="color:black" >All Quotes</a>
+    <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-FAMOUSQUOTES" role="tab" aria-controls="nav-profile" aria-selected="false" style="color:black">Famous Quotes</a>
+    <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-INSPIRATIONALQUOTES" role="tab" aria-controls="nav-contact" aria-selected="false" style="color:black">Inspirational Quotes</a>
+  <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-MOTIVATIONALQUOTES" role="tab" aria-controls="nav-profile" aria-selected="false" style="color:black">Motivational Quotes</a>
+    <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-RELATIONSHIPQUOTES" role="tab" aria-controls="nav-contact" aria-selected="false" style="color:black">Relationship Quotes</a>
+  <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-FEELINGSQUALITIES" role="tab" aria-controls="nav-profile" aria-selected="false" style="color:black"> Feelings & Qualities</a>
+    <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-SEASONSQUOTES" role="tab" aria-controls="nav-contact" aria-selected="false" style="color:black">Seasons Quotes</a>
+  <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-CULTUREQUOTES" role="tab" aria-controls="nav-profile" aria-selected="false" style="color:black">Culture Quotes</a>
+    <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-ROMANTICQUOTES" role="tab" aria-controls="nav-contact" aria-selected="false" style="color:black">Romantic Quotes</a>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+
+<br><br>
+{% for y in all %}
+     <div id="container">
+       <br><br>
+        <span id="span">
+           <span >" {{ y.quotes }} "</span>
+        </span><br>
+            <span id="div">~ {{ y.username }} </span>
+          <br><br>
+     <div style="float:left;margin-left:30px;">
+ <svg xmlns="http://www.w3.org/2000/svg" id="bi" width="25" height="25" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16" >
+  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+</svg>
+ <svg xmlns="http://www.w3.org/2000/svg" id="i bi-heart-fill2" width="25" height="25" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16" >
+  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+</svg>
+
+ </div>
+     </div>
+
+                    <br><br><br><br>
+               {% endfor %}
+               </div>
+
+    <div class="tab-pane fade" id="nav-FAMOUSQUOTES" role="tabpanel" aria-labelledby="nav-profile-tab">
+        <br><br>
+{% for y in famo %}
+     <div id="container">
+       <br><br>
+        <span id="span">
+           <span >" {{ y.quotes }} "</span>
+        </span><br>
+            <span id="div">~ {{ y.username }} </span>
+          <br><br>
+     </div>
+
+
+                    <br><br><br><br>
+               {% endfor %}
+
+    </div>
+
+
+  <div class="tab-pane fade" id="nav-INSPIRATIONALQUOTES" role="tabpanel" aria-labelledby="nav-contact-tab">
+       <br><br>
+{% for y in ins %}
+     <div id="container">
+       <br><br>
+        <span id="span">
+           <span >" {{ y.quotes }} "</span>
+        </span><br>
+            <span id="div">~ {{ y.username }} </span>
+          <br><br>
+     </div>
+
+
+                    <br><br><br><br>
+               {% endfor %}
+
+  </div>
+ <div class="tab-pane fade" id="nav-RELATIONSHIPQUOTES" role="tabpanel" aria-labelledby="nav-contact-tab">
+       <br><br>
+{% for y in rela %}
+     <div id="container">
+       <br><br>
+        <span id="span">
+           <span >" {{ y.quotes }} "</span>
+        </span><br>
+            <span id="div">~ {{ y.username }} </span>
+          <br><br>
+     </div>
+
+
+                    <br><br><br><br>
+               {% endfor %}
+
+  </div>
+ <div class="tab-pane fade" id="nav-MOTIVATIONALQUOTES" role="tabpanel" aria-labelledby="nav-contact-tab">
+       <br><br>
+{% for y in moti %}
+     <div id="container">
+       <br><br>
+        <span id="span">
+           <span >" {{ y.quotes }} "</span>
+        </span><br>
+            <span id="div">~ {{ y.username }} </span>
+          <br><br>
+     </div>
+
+
+                    <br><br><br><br>
+               {% endfor %}
+
+  </div>
+ <div class="tab-pane fade" id="nav-FEELINGSQUALITIES" role="tabpanel" aria-labelledby="nav-contact-tab">
+       <br><br>
+{% for y in feel %}
+     <div id="container">
+       <br><br>
+        <span id="span">
+           <span >" {{ y.quotes }} "</span>
+        </span><br>
+            <span id="div">~ {{ y.username }} </span>
+          <br><br>
+     </div>
+
+
+                    <br><br><br><br>
+               {% endfor %}
+
+  </div>
+ <div class="tab-pane fade" id="nav-SEASONSQUOTES" role="tabpanel" aria-labelledby="nav-contact-tab">
+       <br><br>
+{% for y in seas %}
+     <div id="container">
+       <br><br>
+        <span id="span">
+           <span >" {{ y.quotes }} "</span>
+        </span><br>
+            <span id="div">~ {{ y.username }} </span>
+          <br><br>
+     </div>
+
+
+                    <br><br><br><br>
+               {% endfor %}
+
+  </div>
+ <div class="tab-pane fade" id="nav-CULTUREQUOTES" role="tabpanel" aria-labelledby="nav-contact-tab">
+       <br><br>
+{% for y in cult %}
+     <div id="container">
+       <br><br>
+        <span id="span">
+           <span >" {{ y.quotes }} "</span>
+        </span><br>
+            <span id="div">~ {{ y.username }} </span>
+          <br><br>
+     </div>
+
+
+                    <br><br><br><br>
+               {% endfor %}
+
+  </div>
+ <div class="tab-pane fade" id="nav-ROMANTICQUOTES" role="tabpanel" aria-labelledby="nav-contact-tab">
+       <br><br>
+{% for y in roma %}
+     <div id="container">
+       <br><br>
+        <span id="span">
+           <span >" {{ y.quotes }} "</span>
+        </span><br>
+            <span id="div">~ {{ y.username }} </span>
+          <br><br>
+     </div>
+
+
+                    <br><br><br><br>
+               {% endfor %}
+
+  </div>
+
+</div>
+ {% endblock %}
+</center>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

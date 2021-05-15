@@ -1,0 +1,67 @@
+{% extends 'htmlpages/base.html' %}
+{% block content %}
+<html>
+<head>
+<title>Write_Quotes</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+</head>
+<body>
+<br><br><br><br>
+
+<center>
+<button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><i class="fas fa-feather-alt"></i> Write Quotes <i class="fas fa-feather-alt"></i></button>
+</center>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title " id="exampleModalLabel" style="color:darkgreen;" ><i class="fas fa-feather-alt"></i> Write Your Quotes </h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">x</button>
+      </div>
+      <div class="modal-body">
+        <form action="Quotes_Post" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label" > SELECT TOPIC:</label>
+            <select  class="form-control" id="recipient-name" name="topic">
+                <option value="">Select your quotes</option>
+                <option value="FAMOUS QUOTES"><i class="fas fa-grin-stars"></i> FAMOUS QUOTES</option>
+                 <option value="INSPIRATIONAL QUOTES"><i class="fas fa-laugh-beam"></i> INSPIRATIONAL QUOTES</option>
+                 <option value="MOTIVATIONAL QUOTES"><i class="fas fa-laugh-beam"></i> MOTIVATIONAL QUOTES</option>
+                 <option value="RELATIONSHIP QUOTES"><i class="fas fa-kiss-wink-heart"></i> RELATIONSHIP QUOTES</option>
+                 <option value="FEELINFS & QUALITIES"><i class="fas fa-grin-hearts"></i> FEELINFS & QUALITIES</option>
+                 <option value="SEASONS QUOTES"><i class="fas fa-grin-alt"></i> SEASONS QUOTES</option>
+                <option value="CULTURE QUOTES"><i class="fas fa-flushed"></i> CULTURE QUOTES</option>
+                 <option value="ROMANTIC QUOTES"><i class="fas fa-kiss-beam"></i> ROMANTIC QUOTES</option>
+                <option value="OTHER QUOTES"><i class="far fa-grin-tongue-wink"></i> OTHER QUOTES</option>
+
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">QUOTES:</label>
+            <textarea class="form-control" name="quotes" id="message-text" placeholder="Write Quotes ............" rows="8"></textarea>
+          </div>
+            <input type="hidden" name="mobileno" value="{{ data.mobileno }}">
+             <input type="hidden" name="username" value="{{ data.username }}">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <input type="submit" class="btn btn-success" value="POST"></input> </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+<br><br><br>
+<center><div style="font-family: 'Arial Black';color:green;">{{ msg }}</div></center>
+
+<br><br><br>
+
+<center><div style="font-family: 'Arial Black';color:green;">Please don't use double quote ("  ") in your QUOTES . We already use it in your quotes .</div></center>
+
+</body>
+</html>
+
+{% endblock %}
