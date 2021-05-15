@@ -19,5 +19,7 @@ urlpatterns = [
     path('Quotes_Post',views.Quotes_Post,name='Quotes_post'),
     path('My_Quotes',views.My_Quotes,name='My_Quotes'),
     path('Delete_Post<id>',views.Delete_Post,name="Delete_Post"),
+    path('Home__page',views.Home__page,name="Home__page"),
+
 
 ]
