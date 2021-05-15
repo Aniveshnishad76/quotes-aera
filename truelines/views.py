@@ -114,3 +114,17 @@ def Delete_Post(request,id):
 def Home_page(request):
     x=QuotesPost.objects.all()
     return render(request,"htmlpages/index.html",{"data":x})
+def Home__page(request):
+    mobileno=request.session['mobileno']
+    x=RegisterTable.objects.get(mobileno=mobileno)
+    all=QuotesPost.objects.all()
+    i = QuotesPost.objects.filter(topic__startswith='INSPIRATIONAL')
+    f = QuotesPost.objects.filter(topic__startswith='FEEL')
+    m = QuotesPost.objects.filter(topic__startswith='MOTI')
+    r = QuotesPost.objects.filter(topic__startswith='RELA')
+    fa = QuotesPost.objects.filter(topic__startswith='FAMO')
+    s = QuotesPost.objects.filter(topic__startswith='SEAS')
+    c = QuotesPost.objects.filter(topic__startswith='CULT')
+    ro = QuotesPost.objects.filter(topic__startswith='ROMA')
+    return render(request,"htmlpages/index1.html",{"mobileno":mobileno,'data':x,"all":all,"ins":i,'feel':f,'moti':m,'rela':r,'famo':fa,'seas':s,'cult':c,'roma':ro})
+
